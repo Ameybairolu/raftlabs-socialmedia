@@ -1,7 +1,27 @@
 import logo from "./logo.svg";
 import "./App.css";
 
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LoginForm from "features/loginForm";
+import RegisterForm from "features/registerForm";
+
 const App: React.FC = () => {
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            element: <h1>Hello</h1>,
+            loader: undefined
+        },
+        {
+            path: "login",
+            element: <LoginForm />
+        },
+        {
+            path: "register",
+            element: <RegisterForm />
+        }
+    ]);
+
     return (
         <div className="App">
             <header className="App-header">
@@ -13,6 +33,7 @@ const App: React.FC = () => {
                     Learn React
                 </a>
             </header>
+            <RouterProvider router={router} />
         </div>
     );
 };

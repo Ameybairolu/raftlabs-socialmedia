@@ -29,6 +29,7 @@
         "@typescript-eslint/triple-slash-reference": "off",
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
-        "@typescript-eslint/no-floating-promises": "off"
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }]
     }
 }
